@@ -1,9 +1,5 @@
 'use client';
 
-import axios from "axios";
-import { AiFillGithub } from "react-icons/ai";
-//import { signIn } from "next-auth/react";
-import { FcGoogle } from "react-icons/fc";
 import { useCallback, useState } from "react";
 import { toast } from "react-hot-toast";
 import { 
@@ -12,17 +8,17 @@ import {
   useForm
 } from "react-hook-form";
 
-//import useLoginModal from "@/app/hooks/useLoginModal";
+import useLoginModal from "../hooks/useLoginModal";
 import useRegisterModal from "../hooks/useRegisterModal";
-
+import * as yup from 'yup';
 import Modal from "./Modal";
 import Input from "../inputs/Input";
 import Heading from "../Heading";
-import Button from "../Button";
+import { useRegisterUser } from "@/app/api/User";
 
 const RegisterModal= () => {
   const registerModal = useRegisterModal();
- // const loginModal = useLoginModal();
+  const loginModal = useLoginModal();
   const [isLoading, setIsLoading] = useState(false);
 
   const { 
@@ -38,28 +34,46 @@ const RegisterModal= () => {
       password: ''
     },
   });
+  const schema = yup.object().shape({
+    name: yup.string().required('Name is required'),
+    email: yup.string().email('Invalid email').required('Email is required'),
+    password: yup.string().required('Password is required').min(8, 'Password must be at least 8 characters'),
+  });
+  const registerUser = useRegisterUser();
+  const onSubmit: SubmitHandler<FieldValues> = async(data) => {
 
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    setIsLoading(true);
+    try {
+      await schema.validate(data, { abortEarly: false });
+      setIsLoading(true);
+  
+      try {
+        await registerUser.mutateAsync(data); // Call the query function
+        toast.success("Registered!");
+        registerModal.onClose();
+        loginModal.onOpen();
+      } catch (error) {
+        toast.error("Something went wrong");
+      } finally {
+        setIsLoading(false);
+      }
+    } catch (error) {
+      if (error instanceof yup.ValidationError) {
+        // Handle validation errors
+        error.errors.forEach((errorMessage) => {
+          toast.error(errorMessage);
+        });
+      } else {
+        // Handle other errors
+        toast.error("Validation failed. Please check your input.");
+      }
+    }
 
-    axios.post('/api/register', data)
-    .then(() => {
-      toast.success('Registered!');
-      registerModal.onClose();
- //     loginModal.onOpen();
-    })
-    .catch((error) => {
-      toast.error('Something went wrong');
-    })
-    .finally(() => {
-      setIsLoading(false);
-    })
   }
 
   const onToggle = useCallback(() => {
     registerModal.onClose();
-    // loginModal.onOpen();
-  }, [registerModal/*, loginModal*/])
+    loginModal.onOpen();
+  }, [registerModal, loginModal])
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
@@ -98,18 +112,6 @@ const RegisterModal= () => {
   const footerContent = (
     <div className="flex flex-col gap-4 mt-3">
       <hr />
-      <Button 
-        outline 
-        label="Continue with Google"
-        icon={FcGoogle}
-        onClick={() => {}} 
-      />
-      <Button 
-        outline 
-        label="Continue with Github"
-        icon={AiFillGithub}
-       onClick={() => {}}
-      />
       <div 
         className="
           text-neutral-500 
