@@ -17,7 +17,7 @@ export function LoadMore() {
 
       const loadMoreListings = async () => {
         // Once the page 8 is reached repeat the process all over again.
-        await delay(2000);
+        await delay(20);
         const nextPage = (page % 7) + 1;
         const newProducts = (await getListings(nextPage)) ?? [];
         setListings((prevProducts: any[]) => [...prevProducts, ...newProducts]);

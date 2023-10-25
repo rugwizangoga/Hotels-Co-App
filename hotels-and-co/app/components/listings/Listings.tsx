@@ -3,9 +3,25 @@ import EmptyState from "../EmptyState";
 import ListingCard from "./ListingCard";
 
 export function Listings({ listings }: any) {
+  const lis = listings
+  if(lis.length ==0){
+    return <EmptyState showReset />
+  }
   return (
-    <>
-      {listings && listings.length > 0 ? (
+    <div 
+          className="
+            pt-24
+            grid 
+            grid-cols-1 
+            sm:grid-cols-2 
+            md:grid-cols-3 
+            lg:grid-cols-4
+            xl:grid-cols-5
+            2xl:grid-cols-6
+            gap-8
+          "
+        >
+      {listings ? (
         listings.map((listing: any) => (
           <ListingCard
             key={listing.id}
@@ -15,6 +31,7 @@ export function Listings({ listings }: any) {
       ) : (
         <EmptyState showReset />
       )}
-    </>
+    
+    </div>
   );
 }

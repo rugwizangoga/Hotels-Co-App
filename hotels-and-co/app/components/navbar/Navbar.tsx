@@ -5,7 +5,6 @@ import Logo from './Logo'
 import Search from './Search'
 import UserMenu from './UserMenu'
 import Categories from './Categories'
-import LoginModal from '../modals/LoginModal'
 const Navbar = () => {
   return (
     <header className=' bg-white fixed w-full z-10 shadow-sm'>
