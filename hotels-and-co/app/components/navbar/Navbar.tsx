@@ -4,7 +4,8 @@ import Container from '../Container'
 import Logo from './Logo'
 import Search from './Search'
 import UserMenu from './UserMenu'
-
+import Categories from './Categories'
+import LoginModal from '../modals/LoginModal'
 const Navbar = () => {
   return (
     <header className='fixed w-full z-10 shadow-sm'>
@@ -17,6 +18,7 @@ const Navbar = () => {
             </div>
           </Container>
         </nav>
+        <Categories />
     </header>
   )
 }
