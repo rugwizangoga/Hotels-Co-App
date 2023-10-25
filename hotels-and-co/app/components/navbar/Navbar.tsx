@@ -8,7 +8,7 @@ import Categories from './Categories'
 import LoginModal from '../modals/LoginModal'
 const Navbar = () => {
   return (
-    <header className='fixed w-full z-10 shadow-sm'>
+    <header className=' bg-white fixed w-full z-10 shadow-sm'>
         <nav className='py-4 border-b-[1px]'>
           <Container>
             <div className='flex flex-row items-center justify-between gap-3 md:gap-0'>

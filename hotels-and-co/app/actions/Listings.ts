@@ -12,6 +12,5 @@ export const getListings = (pagePram: number) => {
 
 export const getListing = (id:any) => {
   const ListingURL = 'https://65338eb8d80bd20280f69405.mockapi.io/api/Rooms/'+`${id}`;
-  console.log(ListingURL)
   return axios.get(ListingURL).then((res)=>res.data);
 };
