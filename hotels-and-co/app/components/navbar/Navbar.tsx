@@ -4,10 +4,10 @@ import Container from '../Container'
 import Logo from './Logo'
 import Search from './Search'
 import UserMenu from './UserMenu'
-
+import Categories from './Categories'
 const Navbar = () => {
   return (
-    <header className='fixed w-full z-10 shadow-sm'>
+    <header className=' bg-white fixed w-full z-10 shadow-sm'>
         <nav className='py-4 border-b-[1px]'>
           <Container>
             <div className='flex flex-row items-center justify-between gap-3 md:gap-0'>
@@ -17,6 +17,7 @@ const Navbar = () => {
             </div>
           </Container>
         </nav>
+        <Categories />
     </header>
   )
 }
