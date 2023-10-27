@@ -138,7 +138,7 @@ You can deploy this project using:
 
 ## 🔭 Strategy to revamp a legacy application <a name="Strategy-to-evamp-a-legacy-application"></a>
 
-### 1. Initial Assessment and Planning:
+##### 1. Initial Assessment and Planning:
 
 - Assemble the project team, including back-end and front-end engineers, UI/UX designers, a product owner, and a scrum master.
 - Collaborate with business teams to understand their requirements and expectations.
@@ -169,9 +169,9 @@ Conduct a comprehensive analysis of the legacy system, identifying pain points, 
 
 ### 6. Development Phases:
 
-- ** [ Phase 1: ] ** Create a foundational architecture, including routing, state management, and basic UI components.
-- ** [ Phase 2: ] ** Develop core features and integrate them with the back-end, focusing on critical user functionalities.
-- ** [ Phase 3: ] ** Implement advanced features, third-party integrations, and optimizations.
+- **Phase 1:** Create a foundational architecture, including routing, state management, and basic UI components.
+- **Phase 2:** Develop core features and integrate them with the back-end, focusing on critical user functionalities.
+- **Phase 3** Implement advanced features, third-party integrations, and optimizations.
 Conduct thorough testing and bug fixing at each phase.
 
 ### 7. Continuous Integration and Deployment:
