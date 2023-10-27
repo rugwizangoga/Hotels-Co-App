@@ -12,7 +12,7 @@ import useLoginModal from "../hooks/useLoginModal";
 import Modal from "./Modal";
 import Input from "../inputs/Input";
 import Heading from "../Heading";
-import {userQuery} from "@/app/api/User";
+import {useUserQuery} from "@/app/api/User";
 import { useRouter } from "next/navigation";
 
 const LoginModal= () => {
@@ -34,7 +34,7 @@ const LoginModal= () => {
     },
   });
   
-  const users = userQuery()
+  const users = useUserQuery()
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true);

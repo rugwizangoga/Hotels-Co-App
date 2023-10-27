@@ -25,7 +25,7 @@ export const loginUser = () => {
   return axios.get(UserURL).then((res)=>res.data);
 };
 
-export const userQuery = ()=>{
+export const useUserQuery = ()=>{
   return useQuery({
   queryKey: ['users'],
   queryFn: loginUser,
