@@ -29,7 +29,7 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
+#### Tech Stack <a name="tech-stack"></a>
 
 > Describe the tech stack and include only the relevant sections that apply to your project.
 
@@ -138,91 +138,91 @@ You can deploy this project using:
 
 ## 🔭 Strategy to revamp a legacy application <a name="Strategy-to-evamp-a-legacy-application"></a>
 
-##### 1. Initial Assessment and Planning:
+#### 1. Initial Assessment and Planning:
 
 - Assemble the project team, including back-end and front-end engineers, UI/UX designers, a product owner, and a scrum master.
 - Collaborate with business teams to understand their requirements and expectations.
 Conduct a comprehensive analysis of the legacy system, identifying pain points, technical debt, and areas for improvement.
 - Define project goals and success criteria, such as improved user experience, faster load times, and scalability.
 
-### 2. Technology Stack Selection:
+#### 2. Technology Stack Selection:
 
 - Evaluate and choose a modern technology stack for the front-end development, considering factors like performance, scalability, and developer expertise.
 - Ensure the chosen stack aligns with the back-end requirements for seamless integration.
 
-### 3. Design and User Experience:
+#### 3. Design and User Experience:
 
 - Collaborate closely with UI/UX designers to create wireframes, prototypes, and design guidelines.
 - Obtain feedback from stakeholders and iterate on designs.
 - Develop a responsive and intuitive user interface to enhance user engagement.
 
-### 4. Back-end and Front-end Collaboration:
+#### 4. Back-end and Front-end Collaboration:
 
 - Establish clear communication channels between back-end and front-end teams.
 - Define API contracts and data requirements to ensure a harmonious interaction between the two components.
 - Consistently share progress updates and conduct regular cross-team meetings.
 
-### 5. Agile Development Process:
+#### 5. Agile Development Process:
 
 - Implement an agile development methodology (e.g., Scrum) to enable iterative development and continuous improvement.
 - Appoint a scrum master to facilitate the agile process and manage project timelines.
 
-### 6. Development Phases:
+#### 6. Development Phases:
 
 - **Phase 1:** Create a foundational architecture, including routing, state management, and basic UI components.
 - **Phase 2:** Develop core features and integrate them with the back-end, focusing on critical user functionalities.
 - **Phase 3** Implement advanced features, third-party integrations, and optimizations.
 Conduct thorough testing and bug fixing at each phase.
 
-### 7. Continuous Integration and Deployment:
+#### 7. Continuous Integration and Deployment:
 
 - Set up a CI/CD pipeline for automated testing, building, and deployment.
 - Frequent integration of code changes to ensure a stable and continuously evolving application.
 - Implement feature flags to control the release of new features.
 
-### 8. Testing and Quality Assurance:
+#### 8. Testing and Quality Assurance:
 
 - Perform unit testing, integration testing, and end-to-end testing to guarantee robust code.
 - Engage QA testers to identify and resolve bugs and issues.
 - Conduct load testing to ensure the application can handle millions of users.
 
-### 9. User Acceptance Testing (UAT):
+#### 9. User Acceptance Testing (UAT):
 
 - Collaborate with the business team to conduct UAT, ensuring that the application meets their requirements and expectations.
 - Collect user feedback and make necessary adjustments.
 
-### 10. Documentation and Training:
+#### 10. Documentation and Training:
 
 - Create comprehensive documentation for developers, including codebase, APIs, and deployment procedures.
 - Provide training sessions for the support team, ensuring they are prepared to assist users.
 
-### 11. Performance Optimization:
+#### 11. Performance Optimization:
 
 - Continuously monitor the application's performance, identifying and addressing bottlenecks.
 - Employ techniques like lazy loading, code splitting, and CDN utilization for faster loading times.
 
-### 12. Security and Compliance:
+#### 12. Security and Compliance:
 
 - Implement security best practices, including authentication, authorization, and data encryption.
 - Ensure compliance with data protection regulations and industry standards.
 
-### 13. Rollout and Go-Live:
+#### 13. Rollout and Go-Live:
 
 - Plan a phased rollout, beginning with a controlled group of users to minimize disruptions.
 - Monitor the application's performance and user feedback after the go-live.
 - Address any post-launch issues promptly.
 
-### 14. Post-Launch Support and Maintenance:
+#### 14. Post-Launch Support and Maintenance:
 
 - Establish a support team to address user queries, issues, and bug reports.
 - Schedule regular maintenance updates to address emerging requirements and enhance the application.
 
-### 15. KPI Monitoring and Feedback Loop:
+#### 15. KPI Monitoring and Feedback Loop:
 
 - Define key performance indicators (KPIs) to measure the success of the project.
 - Continuously collect user feedback and performance data to inform future iterations.
 
-### 16. Stakeholder Communication:
+#### 16. Stakeholder Communication:
 
 - Maintain open communication with all stakeholders, providing regular updates on project progress, milestones, and any deviations from the plan.
 
