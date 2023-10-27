@@ -47,7 +47,7 @@
   <summary>Server</summary>
   <ul>
     <li><a href="https://nextjs.org/">Next.js</a></li>
-    li><a href="https://mockapi.io/">Mockapi.io</a></li>
+    <li><a href="https://mockapi.io/">Mockapi.io</a></li>
   </ul>
 </details>
 
