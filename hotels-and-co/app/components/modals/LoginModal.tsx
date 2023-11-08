@@ -14,12 +14,14 @@ import Input from "../inputs/Input";
 import Heading from "../Heading";
 import {useUserQuery} from "@/app/api/User";
 import { useRouter } from "next/navigation";
+import { useUser } from "../../providers/UserContext"
 
 const LoginModal= () => {
   const router = useRouter();
   const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
   const [isLoading, setIsLoading] = useState(false);
+  const { login } = useUser();
 
   const { 
     register, 
@@ -58,6 +60,7 @@ const LoginModal= () => {
       setIsLoading(false);
       return toast.error("Invalid password");
     }
+    login(user); 
     loginModal.onClose();
     router.refresh();
     setIsLoading(false);
