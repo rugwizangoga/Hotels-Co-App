@@ -68,7 +68,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Link](https://hotels-co-app.vercel.app/)
+- [Link](https://vercel.live/link/hotels-co-gzbvfk3w6-iradukunda-pacific-rugwizangogas-projects.vercel.app?via=deployment-visit-button)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
