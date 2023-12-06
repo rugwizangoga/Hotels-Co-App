@@ -46,7 +46,7 @@ const ListingCard = forwardRef<HTMLDivElement, ListingCardProps>((
   return (
     <div 
       onClick={() => router.push(`/listings/${data.id}`)} 
-      className="col-span-1 cursor-pointer flex flex-col gap-2"
+      className="col-span-1 cursor-pointer group flex flex-col gap-2"
       ref={ref}
     >
         <div 
