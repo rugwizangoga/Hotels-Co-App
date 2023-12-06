@@ -102,4 +102,5 @@ const ListingCard = forwardRef<HTMLDivElement, ListingCardProps>((
    );
 }
 )
+ListingCard.displayName = 'ListingCard';
 export default ListingCard;
