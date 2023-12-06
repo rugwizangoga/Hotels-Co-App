@@ -31,8 +31,6 @@
 
 #### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
   <summary>Client</summary>
   <ul>
@@ -55,7 +53,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
 - **[ Display a list of hotel rooms ]**
 - **[ display details about the room once selected ]**
@@ -68,7 +65,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Link](https://vercel.live/link/hotels-co-gzbvfk3w6-iradukunda-pacific-rugwizangogas-projects.vercel.app?via=deployment-visit-button)
+- [Link](https://hotels-co-gzbvfk3w6-iradukunda-pacific-rugwizangogas-projects.vercel.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
