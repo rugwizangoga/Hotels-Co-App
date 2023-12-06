@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export const listings = async ({pageParam}:{pageParam:number}) => {
-  const limit = 8;
-  const ListingsURL = `https://65338eb8d80bd20280f69405.mockapi.io/api/Rooms?page=${pageParam}&limit=${limit}`;
+export const getlisting = async (params: any)  => {
+  const { listingId } = params;
+  const ListingsURL = `https://65338eb8d80bd20280f69405.mockapi.io/api/Rooms/${listingId}`;
 
   try {
     const response = await axios.get(ListingsURL);

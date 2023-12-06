@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useCallback, useMemo } from "react";
-import { format } from 'date-fns';
+import { forwardRef, useCallback} from "react";
 
 import useCountries from "../hooks/useCountries";
 
@@ -12,21 +11,22 @@ import Button from "../Button";
 
 interface ListingCardProps {
    data: any;
-   reservation?: any;
   onAction?: (id: string) => void;
   disabled?: boolean;
   actionLabel?: string;
   actionId?: string;
 };
 
-const ListingCard: React.FC<ListingCardProps> = ({
-   data,
-  reservation,
-  onAction,
-  disabled,
-  actionLabel,
-  actionId = '',
-}) => {
+const ListingCard = forwardRef<HTMLDivElement, ListingCardProps>((
+    {
+      data,
+      onAction,
+      disabled,
+      actionLabel,
+      actionId = '',
+    },
+    ref
+  ) => {
   const router = useRouter();
   const { getByValue } = useCountries();
 
@@ -43,31 +43,12 @@ const ListingCard: React.FC<ListingCardProps> = ({
     onAction?.(actionId)
   }, [disabled, onAction, actionId]);
 
-  const price = useMemo(() => {
-    if (reservation) {
-      return reservation.totalPrice;
-    }
-
-    return data.price;
-  }, [reservation, data.price]);
-
-  const reservationDate = useMemo(() => {
-    if (!reservation) {
-      return null;
-    }
-  
-    const start = new Date(reservation.startDate);
-    const end = new Date(reservation.endDate);
-
-    return `${format(start, 'PP')} - ${format(end, 'PP')}`;
-   }, [reservation]);
-
   return (
     <div 
       onClick={() => router.push(`/listings/${data.id}`)} 
-      className="col-span-1 cursor-pointer group"
+      className="col-span-1 cursor-pointer group flex flex-col gap-2"
+      ref={ref}
     >
-      <div className="flex flex-col gap-2 w-full">
         <div 
           className="
             aspect-square 
@@ -98,19 +79,16 @@ const ListingCard: React.FC<ListingCardProps> = ({
             />
           </div>
         </div>
-        <div className="font-semibold text-lg">
+        <div className="flex flex-col">
+        <div className="font-semibold text-sm p-0">
           {location?.region}, {location?.label}
         </div>
-        <div className="font-light text-neutral-500">
+        <div className="font-light text-neutral-500 p-0 text-sm">
           {data.category}
         </div>
-        <div className="flex flex-row items-center gap-1">
-          <div className="font-semibold">
-            $ {price}
-          </div>
-          {!reservation && (
-            <div className="font-light">night</div>
-          )}
+        <div className="font-semibold text-sm p-0">
+            $ {data.price}/night
+        </div>
         </div>
         {onAction && actionLabel && (
           <Button
@@ -120,9 +98,8 @@ const ListingCard: React.FC<ListingCardProps> = ({
             onClick={handleCancel}
           />
         )}
-      </div>
     </div>
    );
 }
- 
+)
 export default ListingCard;
