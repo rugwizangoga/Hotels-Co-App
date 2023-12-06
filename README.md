@@ -38,7 +38,7 @@
     <li><a href="https://css-tricks.com/">CSS</a></li>
     <li><a href="https://www.typescript.com/">JavaScript</a></li>
     <li><a href="https://reactjs.org/">React js</a></li>
-    <li><a href="https://tanstack.com/">TanStack</a></li>
+    <li><a href="https://tanstack.com/">TanStackQuery</a></li>
   </ul>
 </details>
 <details>
@@ -65,7 +65,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Link](https://hotels-co-gzbvfk3w6-iradukunda-pacific-rugwizangogas-projects.vercel.app)
+- [Link](https://dev--lustrous-biscochitos-d73193.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
